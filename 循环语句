@@ -15,7 +15,9 @@ int main()
 	return 0;
 }
 
-//getcha和putchar
+//getcha和putchar的使用
+//getchar获取一个字符存入到变量中
+//putchar把获取的字符打印输出
 //输入：ctrl+z+回车 getchar获得一个EOF
 #include<stdio.h>
 int main()
