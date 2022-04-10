@@ -98,4 +98,19 @@ int main()
 	}
 	return 0;
 }
+//------------------------------------------------------------
 
+
+//                                                            do while循环语句
+#include<stdio.h>
+int main()
+{
+	int i =1;  //初始化
+	do
+	{
+		printf("%d ",i);
+		i++;   //调整部分
+	}
+	while(i<=10);  //判断部分
+	return 0;
+}
