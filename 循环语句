@@ -37,7 +37,13 @@ int main()
 	char password[20] = {0};
 	printf("请输入你的密码\n");
 	scanf("%s",password);
+	
 	getchar（）;   //getchar用来把输入缓冲区字符串后面的\n取走
+	//while((ch=getchar()) != '\n')   //此循环代替上面一行的代码，用来优化
+	//{
+	//	;  
+	//}
+	
 	printf("请确定（Y/N）:");
 	ret = getchar();
 	if(ret == 'Y')
