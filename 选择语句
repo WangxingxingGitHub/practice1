@@ -44,6 +44,7 @@ int main()
 
 //                                                           switch语句
 //注意使用break来作为出口
+//注意使用defaulf处理非法的情况
 #include<stdio.h>
 int main()
 {
@@ -70,6 +71,8 @@ int main()
 	case 7:
 		printf("周末\n");
 		break;
+        defaulf:
+	        printf("输入错误\n");
 	}
 	return 0;
 }
