@@ -15,3 +15,15 @@ int main()
 	return 0;
 }
 
+//getcha和putchar
+//输入：ctrl+z+回车 getchar获得一个EOF
+#include<stdio.h>
+int main()
+{
+	int ch = 0;
+	while((ch=getchar()) != EOF)
+	{
+		putchar(ch);
+	}
+	return 0;
+}
