@@ -42,7 +42,7 @@ int main()
 	return 0;
 }
 
-//                                                           switch语句
+//                                                           switch选择语句
 //注意使用break来作为出口
 //注意使用defaulf处理非法的情况
 #include<stdio.h>
