@@ -1,0 +1,23 @@
+//在一个有序数组中查找一个具体的数字n
+
+//                 不使用二分查找
+#include<stdio.h>
+int main()
+{
+	int n = 7;  //假设要查找的数字是7
+	int i = 0;
+	int arr[] = {1,2,3,4,5,6,7,8,9,10};
+	int sz = sizeof(arr)/sizeof(arr[0]);  // 数组中的元素个数
+	for(i=0;i<=9;i++)
+	{
+		if(n == arr[i])
+		{
+			printf("找到了，该元素的下标是：%d\n",i);
+		    break;
+		}
+	}
+	if(sz==i)
+		printf("找不到该元素\n");
+	return 0;
+}
+//-----------------------------------
