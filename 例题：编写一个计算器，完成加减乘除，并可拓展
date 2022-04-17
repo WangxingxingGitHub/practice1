@@ -38,3 +38,89 @@ int Div(int x,int y)
 {
 	return x/y;
 }
+
+//                                                 main .h  主函数
+//———————————————————————————————————————————————— 使用循环完成
+#include<stdio.h>
+#include"add.h"
+int main ()
+{
+	int input = 0;
+	int x = 0;
+	int y = 0;
+	do
+	{
+		menu();
+		printf("请输入你的操作选择\n");
+		scanf("%d",&input);
+		switch(input)
+		{
+		case 1:
+			printf("请输入两个操作数： ");
+			scanf("%d%d",&x,&y);
+			printf("结果是：%d\n",Add(x,y));
+			break;
+		case 2:
+			printf("请输入两个操作数： ");
+			scanf("%d%d",&x,&y);
+			printf("结果是：%d\n",Sub(x,y));
+			break;
+		case 3:
+			printf("请输入两个操作数： ");
+			scanf("%d%d",&x,&y);
+			printf("结果是：%d\n",Mul(x,y));
+			break;
+		case 4:
+			printf("请输入两个操作数： ");
+			scanf("%d%d",&x,&y);
+			printf("结果是：%d\n",Div(x,y));
+			break;
+		case 0:
+			printf("退出\n");
+			break;
+		default:
+			printf("输入错误\n");
+			break;
+		}
+	}
+	while(input);
+	return 0;
+}
+
+//———————————————————————————————————————————————— 使用函数指针数组完成
+#include<stdio.h>
+#include"add.h"
+int main ()
+{
+	int input = 0;
+	int x = 0;
+	int y = 0;		
+	int (*parr[])(int ,int)={0,Add,Sub,Mul,Div}; //函数指针数组，里面放同类型函数的地址
+	do
+	{
+		menu();  //打印菜单函数
+		printf("请输入你的选择：");
+		scanf("%d",&input);
+
+		if(input>=1 && input<=4)  //调用函数指针里的函数
+		{
+			printf("请输入两个操作数： ");
+			scanf("%d%d",&x,&y);
+			printf("结果为：%d\n",parr[input](x,y));
+		}
+
+		else if(input == 0)  //退出
+		{
+			printf("退出\n");
+    		break;
+		}
+
+		else  //输入错误
+		{
+			printf("输入错误\n");
+		}
+
+	}
+	while(input);
+	return 0;
+}
