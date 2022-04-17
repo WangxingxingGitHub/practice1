@@ -1,1 +1,12 @@
+//                                       add.c   函数声明
+void menu();  //菜单函数声明
 
+int Add(int x,int y);  //加法函数声明
+
+int Sub(int x,int y);  //减法函数声明
+
+int Mul(int x,int y);  //乘法函数声明
+
+int Div(int x,int y);  //除法函数声明
+
+//                                      
