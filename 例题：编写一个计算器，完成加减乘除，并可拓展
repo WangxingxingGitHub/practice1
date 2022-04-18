@@ -12,33 +12,42 @@ int Div(int x,int y);  //除法函数声明
 void Calc(int (*p)(int ,int));  //使用回调函数声明
 
 //                                                  add.h    函数定义
-void menu()  //菜单函数声明
+void menu()  //菜单函数定义
 {
 	printf("************************************\n");
-	printf("*****    1. 加法     2.减法    *****\n");
-    printf("*****    3. 乘法     4.除法    *****\n");
-    printf("*****    0. 退出               *****\n");
+	printf("*****    1. 加法     2.减法     *****\n");
+        printf("*****    3. 乘法     4.除法     *****\n");
+        printf("*****    0. 退出               *****\n");
 	printf("************************************\n");
 }
 
-int Add(int x,int y)  //加法函数声明
+int Add(int x,int y)  //加法函数定义
 {
 	return x+y;
 }
 
-int Sub(int x,int y)  //减法函数声明
+int Sub(int x,int y)  //减法函数定义
 {
 	return x-y;
 }
 
-int Mul(int x,int y)  //乘法函数声明
+int Mul(int x,int y)  //乘法函数定义
 {
 	return x*y;
 }
 
-int Div(int x,int y)  //除法函数声明
+int Div(int x,int y)  //除法函数定义
 {
 	return x/y;
+}
+
+void Calc(int (*p)(int ,int))  //使用回调函数定义
+{
+	int x = 0;
+	int y = 0;
+	printf("请输入两个操作数： ");
+	scanf("%d%d",&x,&y);
+	printf("结果是：%d\n",p(x,y));
 }
 
 //                                                 main .h  主函数
