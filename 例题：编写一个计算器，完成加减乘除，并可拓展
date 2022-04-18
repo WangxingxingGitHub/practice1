@@ -31,12 +31,12 @@ int Sub(int x,int y)  //减法函数声明
 	return x-y;
 }
 
-int Mul(int x,int y)
+int Mul(int x,int y)  //乘法函数声明
 {
 	return x*y;
 }
 
-int Div(int x,int y)
+int Div(int x,int y)  //除法函数声明
 {
 	return x/y;
 }
