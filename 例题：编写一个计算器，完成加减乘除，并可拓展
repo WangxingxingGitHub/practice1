@@ -12,7 +12,7 @@ int Div(int x,int y);  //除法函数声明
 void Calc(int (*p)(int ,int));  //使用回调函数声明
 
 //                                                  add.h    函数定义
-void menu()  //菜单函数
+void menu()  //菜单函数声明
 {
 	printf("************************************\n");
 	printf("*****    1. 加法     2.减法    *****\n");
@@ -21,7 +21,7 @@ void menu()  //菜单函数
 	printf("************************************\n");
 }
 
-int Add(int x,int y)
+int Add(int x,int y)  //加法函数声明
 {
 	return x+y;
 }
