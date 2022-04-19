@@ -1,1 +1,33 @@
+//编写一个程序，模拟用户输入密码解锁手机
 
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char password[20] = {0};  //存放输入的密码
+	char key[] = {"201913010334"};  //设置密码为我的学号
+	int i = 0;
+	int k = 3;  //可以解锁的次数
+	int j = k-1;
+	for(i=0;i<k;i++)
+	{
+		printf("请输入你的密码： ");
+		scanf("%s",password);
+		if(strcmp(password,key)==0)  //strcmp用来比较两个字符串是否相等，相等则返回0
+		{
+			printf("密码正确\n");
+			break;
+		}
+		else if(i<k-1)
+		{
+			printf("密码错误，请重试,你还有%d次机会\n",j);
+			j--;
+		}
+	}
+	if(i==k)
+	{
+		printf("密码错误多次，请稍后重试\n");
+	}
+	return 0;
+}
