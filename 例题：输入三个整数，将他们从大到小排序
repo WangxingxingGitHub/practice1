@@ -1,2 +1,30 @@
 //                        输入三个整数，将他们从大到小排序
 //————————————————————不使用冒泡排序函数
+#include<stdio.h>
+int main()
+{
+	int a = 0;  //1
+	int b = 0;  //2
+	int c = 0;  //3
+	scanf("%d%d%d",&a,&b,&c);
+	if(a<b)
+	{
+		int tem = a;
+		a = b;
+		b = tem;
+	}
+	if(a<c)
+	{
+		int tem = a;
+		a = c;
+		c = tem;
+	}
+	if(b<c)
+	{
+		int tem = b;
+		b = c;
+		c = tem;
+	}
+	printf("%d %d %d",a,b,c);
+	return 0;
+}
