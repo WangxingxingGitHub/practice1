@@ -1,5 +1,6 @@
-#include<stdio.h>
 //                使用while循环
+#include<stdio.h>
+
 int main()
 {
 	int i = 1;
@@ -16,6 +17,8 @@ int main()
 }
 //-------------------------------------
 //                 使用for循环
+#include<stdio.h>
+
 int main()
 {
 	int i = 0;
