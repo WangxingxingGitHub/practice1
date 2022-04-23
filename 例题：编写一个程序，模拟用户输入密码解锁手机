@@ -1,5 +1,3 @@
-//编写一个程序，模拟用户输入密码解锁手机
-
 #include<stdio.h>
 #include<string.h>
 
